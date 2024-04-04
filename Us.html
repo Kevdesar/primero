@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>us</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Didot&display=swap');
+    
+    body {
+        background-color: #f8d7da; 
+        font-size: 24px; 
+        overflow: hidden; 
+        position: relative; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Hace que el cuerpo ocupe toda la altura de la ventana */
+        margin: 0; /* Elimina el margen por defecto */
+        flex-direction: column; /* Alinea los elementos verticalmente */
+    }
+
+    /* Estilo para el título */
+    h1 {
+        text-align: center;
+    }
+
+    /* Estilo para el enlace */
+    a {
+        text-decoration: none;
+        color: #333; /* Color del texto del enlace */
+        font-size: 18px; /* Tamaño de la fuente del enlace */
+        margin-top: 20px; /* Espacio superior para separar del título */
+    }
+
+    .heart {
+        color: red; 
+        position: absolute; 
+        animation: fly linear infinite; 
+    }
+
+    @keyframes fly {
+        from { bottom: -100px; transform: scale(0.5); }
+        to { bottom: 100%; transform: scale(2); }
+    }
+
+</style>
+</head>
+<body>
+    <h1>¡Jelouu my girl!</h1>
+    <a href="segundo_html.html">press here please</a> <!-- Enlace para ir al segundo HTML -->
+    <script>
+        for (let i = 0; i < 30; i++) {
+            let heart = document.createElement("div");
+            heart.className = "heart";
+            heart.innerHTML = "&#10084;"; 
+            heart.style.left = Math.random() * 100 + "%";
+            heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+            document.body.appendChild(heart);
+        }
+    </script>
+</body>
+</html>
+
+
+
+
